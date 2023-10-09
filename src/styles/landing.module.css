@@ -24,3 +24,19 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+/* footer design  */
+
+.islamicDesign::after{
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  border-top: 130px solid transparent;
+  -webkit-border-image: url(https://i.ibb.co/b5rRQtM/footer-border.png);
+  border-image-slice: 160;
+  border-image-outset: 0;
+  background-color: transparent;
+}

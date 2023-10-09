@@ -19,7 +19,10 @@ const Navbar = () => {
                         </li>
 
                         <li className="p-4 border-b-2 border-green-500 border-opacity-0 cursor-pointer">
-                        <a href=""><img className='w-28 h-16' src='https://www.creativefabrica.com/wp-content/uploads/2019/04/Mosque-islamic-logo-vector-by-DEEMKA-STUDIO-6.jpg' alt="logo" /></a>
+                        <a href="">
+                            <img className='w-28 h-22'
+                            src='https://i.ibb.co/W3b4PJc/24-242664-islamic-logo-free-png-transparent-png-removebg-preview.png'
+                            alt="logo" /></a>
                         </li>
 
                         <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
