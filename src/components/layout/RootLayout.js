@@ -1,9 +1,11 @@
 import React from 'react';
 import Navbar from '../shared/Navbar';
+import Header from '../shared/Header';
 
 const RootLayout = ({children}) => {
     return (
         <>
+        <Header></Header>
         <Navbar></Navbar>
         
         <main>{children}</main>
