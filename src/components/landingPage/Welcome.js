@@ -16,6 +16,7 @@ const Welcome = () => {
                             <a href="#" className="block mt-4 text-5xl font-semibold text-gray-800 ">
                                 Welcome to lhsan
                             </a>
+                            <p className='text-amber-700 my-4 text-2xl'>Islamic Center for Muslims to Achieve Spiritual Goals</p>
 
                             <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
                             Namaz is broadcast the jaguar far darn dukooka burra before thus and before ipsum dolor sit amet, consectetur adipisicing elit sed eiusmod tempor ncid parrot withdrew less a darn overheard foolish ran forwards.
