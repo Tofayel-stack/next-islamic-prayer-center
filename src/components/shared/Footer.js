@@ -11,7 +11,7 @@ const Footer = () => {
             <div className='flex justify-center items-center my-8'>
                 <img className='w-36' src="https://i.ibb.co/W3b4PJc/24-242664-islamic-logo-free-png-transparent-png-removebg-preview.png" alt="logo" />
                 <div>
-                    <p className='text-3xl font-bold'>TURAG</p>
+                    <p className='text-3xl font-bold '>TURAG</p>
                     <span>Islamic Center</span>
                 </div>
             </div>

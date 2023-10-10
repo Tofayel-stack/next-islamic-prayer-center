@@ -1,17 +1,18 @@
 import RootLayout from '@/components/layout/RootLayout';
 import React from 'react';
 
-const Contact = () => {
+const Blog = () => {
     return (
         <div>
-            this is contact ... 
+            blog
         </div>
     );
 };
 
-export default Contact;
+export default Blog;
 
-Contact.getLayout = function getLayout(page) {
+
+Blog.getLayout = function getLayout(page) {
     return (
       
         <RootLayout>{page}</RootLayout>

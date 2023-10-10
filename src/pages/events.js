@@ -1,17 +1,18 @@
 import RootLayout from '@/components/layout/RootLayout';
 import React from 'react';
 
-const Contact = () => {
+const Events = () => {
     return (
         <div>
-            this is contact ... 
+            Events
         </div>
     );
 };
 
-export default Contact;
+export default Events;
 
-Contact.getLayout = function getLayout(page) {
+
+Events.getLayout = function getLayout(page) {
     return (
       
         <RootLayout>{page}</RootLayout>

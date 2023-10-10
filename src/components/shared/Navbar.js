@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import mainLogo from '../../assets/logoIslamic.png'
 
 
@@ -9,30 +10,31 @@ const Navbar = () => {
                 <nav className="nav font-semibold text-lg">
                     <ul className="flex items-center">
                         <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer active">
-                        <a href="">Home</a>
+                        
+                        <Link href='/'>Home</Link>
                         </li>
                         <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                        <a href="">Service</a>
+                        <Link href="/service">Service</Link>
                         </li>
                         <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                        <a href="">About Us</a>
+                        <Link href="/about">About Us</Link>
                         </li>
 
                         <li className="p-4 border-b-2 border-green-500 border-opacity-0 cursor-pointer">
-                        <a href="">
+                        <Link href="/">
                             <img className='w-28 h-22'
                             src='https://i.ibb.co/W3b4PJc/24-242664-islamic-logo-free-png-transparent-png-removebg-preview.png'
-                            alt="logo" /></a>
+                            alt="logo" /></Link>
                         </li>
 
                         <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                        <a href="">Blog</a>
+                        <Link href="/blog">Blog</Link>
                         </li>
                         <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                        <a href="">Events</a>
+                        <Link href="/events">Events</Link>
                         </li>
                         <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                        <a href="">Contact</a>
+                        <Link href="/contact">Contact</Link>
                         </li>
                     </ul>
                 </nav>
