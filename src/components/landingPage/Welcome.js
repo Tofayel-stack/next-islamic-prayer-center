@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Welcome = () => {
@@ -35,7 +36,7 @@ const Welcome = () => {
 
                             <div className="flex items-center mt-6">
                                
-                               <button className='bg-lime-600 p-4 rounded text-white'>Ask About Islam</button>
+                               <Link href='/contact' className='bg-lime-600 p-4 rounded text-white'>Ask About Islam</Link>
                                
                             </div>
                         </div>

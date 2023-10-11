@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaMosque } from 'react-icons/fa';
 import { MdSunnySnowing } from 'react-icons/md';
 import { PiMosqueFill } from 'react-icons/pi';
@@ -8,6 +8,29 @@ import { PiClockAfternoonFill } from 'react-icons/pi';
 import styles from '../../styles/landing.module.css'
 
 const PrayerTime = () => {
+
+
+   const [prayerTimeData, setPrayerTimeData] = useState(null)
+   const [isLoading, setLoading] = useState(true)
+  
+   useEffect(() => {
+     fetch('http://api.aladhan.com/v1/timingsByCity/11-10-2023?city=Bogra&country=Bangladesh&method=8')
+       .then((res) => res.json())
+       .then((data) => {
+         setPrayerTimeData(data)
+         setLoading(false)
+       })
+   }, [])
+
+
+
+   const allTimings = prayerTimeData?.data?.timings;
+
+   const day = prayerTimeData?.data?.date?.hijri?.day;
+   const month = prayerTimeData?.data?.date?.hijri?.month?.en;
+   const year = prayerTimeData?.data?.date?.hijri?.year;
+   const timezone = prayerTimeData?.data?.meta?.timezone;
+
     return (
     
         <div className={`bg-[url("https://www.sunnism.com/wp-content/uploads/2023/05/What-is-Namaz-in-Islam.jpg")] z-0 text-white bg-no-repeat bg-cover py-20 ${styles.imageOverlay}`} > 
@@ -17,8 +40,8 @@ const PrayerTime = () => {
                 <h2 className="max-w-lg mb-6 font-sans text-5xl font-bold  md:mx-auto">
                 Today’s Prayer Times
                 </h2>
-                <p>islamic: 14 rabi al awwal 1445 ah </p>
-                <p>monday october 9 2023</p>
+                <p>HIJRI : {day} , {month} , {year} </p>
+                <p>{prayerTimeData?.data?.date?.readable} <span className='text-amber-500'> Timezone :</span> {timezone}</p>
              
             </div>
             <div className="grid grid-cols-2 gap-2 row-gap-2 mb-10 sm:grid-cols-3 lg:grid-cols-6">
@@ -28,7 +51,7 @@ const PrayerTime = () => {
                    <FaMosque className='text-6xl'></FaMosque>
                 </div>
                 <h6 className="font-semibold text-2xl">Fazar</h6>
-                <h6 className="font-xl text-zinc-500">5.51 am</h6>
+                <h6 className="font-xl text-zinc-500">{allTimings?.Fajr}</h6>
                 </div>
 
 
@@ -37,7 +60,7 @@ const PrayerTime = () => {
                    <MdSunnySnowing className='text-6xl'></MdSunnySnowing>
                 </div>
                 <h6 className="font-semibold text-2xl">sunrise</h6>
-                <h6 className="font-xl text-zinc-500">5.51 am</h6>
+                <h6 className="font-xl text-zinc-500">{allTimings?.Sunrise}</h6>
                 </div>
 
 
@@ -45,8 +68,8 @@ const PrayerTime = () => {
                 <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 sm:w-24 sm:h-24">
                    <PiMosqueFill className='text-6xl'></PiMosqueFill>
                 </div>
-                <h6 className="font-semibold text-2xl">Fazar</h6>
-                <h6 className="font-xl text-zinc-500">5.51 am</h6>
+                <h6 className="font-semibold text-2xl">Dhuhr</h6>
+                <h6 className="font-xl text-zinc-500">{allTimings?.Dhuhr}</h6>
                 </div>
 
 
@@ -54,8 +77,8 @@ const PrayerTime = () => {
                 <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 sm:w-24 sm:h-24">
                    <PiClockAfternoonFill className='text-6xl'></PiClockAfternoonFill>
                 </div>
-                <h6 className="font-semibold text-2xl">Fazar</h6>
-                <h6 className="font-xl text-zinc-500">5.51 am</h6>
+                <h6 className="font-semibold text-2xl">Asor</h6>
+                <h6 className="font-xl text-zinc-500">{allTimings?.Asr}</h6>
                 </div>
 
 
@@ -63,16 +86,16 @@ const PrayerTime = () => {
                 <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 sm:w-24 sm:h-24">
                    <PiSunHorizonBold className='text-6xl'></PiSunHorizonBold>
                 </div>
-                <h6 className="font-semibold text-2xl">Fazar</h6>
-                <h6 className="font-xl text-zinc-500">5.51 am</h6>
+                <h6 className="font-semibold text-2xl">Maghrib</h6>
+                <h6 className="font-xl text-zinc-500">{allTimings?.Maghrib}</h6>
                 </div>
 
                 <div className="text-center">
                 <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 sm:w-24 sm:h-24">
                    <GiNightSleep className='text-6xl'></GiNightSleep>
                 </div>
-                <h6 className="font-semibold text-2xl">Fazar</h6>
-                <h6 className="font-xl text-zinc-500">5.51 am</h6>
+                <h6 className="font-semibold text-2xl">Isha</h6>
+                <h6 className="font-xl text-zinc-500">{allTimings?.Isha}</h6>
                 </div>
 
             </div>
