@@ -10,7 +10,7 @@ import IslamicNews from '@/components/landingPage/IslamicNews'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({allService}) {
   return (
     <>
     
@@ -21,7 +21,7 @@ export default function Home() {
    <Banner></Banner>
    <Welcome></Welcome>
    <PrayerTime></PrayerTime>
-   <Services></Services>
+   <Services allService={allService}></Services>
    <PillarsIslam></PillarsIslam>
    <IslamicNews></IslamicNews>
 
@@ -43,3 +43,21 @@ Home.getLayout = function getLayout(page) {
     </>
   )
 }
+
+
+
+
+export const getStaticProps = async () => {
+  console.log('Starting getStaticProps');
+  
+  const res = await fetch('http://localhost:3000/api/services');
+  const data = await res.json();
+
+  // console.log('Fetched data:', data);
+  
+  return {
+      props: { allService: data },
+      revalidate: 10,
+  };
+}
+

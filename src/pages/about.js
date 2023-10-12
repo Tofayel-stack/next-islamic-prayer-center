@@ -71,3 +71,5 @@ About.getLayout = function getLayout(page) {
 
     return <RootLayout>{page}</RootLayout>
 }
+
+

@@ -1,6 +1,13 @@
 import React from 'react';
 
-const Services = () => {
+const Services = ({allService}) => {
+
+
+   
+    const someService = allService.slice(0, 4);
+
+    console.log(someService);
+
     return (
         <div className='container m-auto py-24'>
             {/* title */}
@@ -13,51 +20,24 @@ const Services = () => {
             <div className='mt-16 grid grid-cols-1 gap-2 my-10 sm:grid-cols-3 lg:grid-cols-4'>
 
                 {/* single card  */}
-                <div className="max-w-xs shadow-md hover:bg-lime-600 hover:text-white transition duration-300 dark:bg-gray-900 dark:text-gray-100">
-                    <img src="https://source.unsplash.com/random/300x300/?2" alt="pic" className="object-cover object-center w-full h-72 dark:bg-gray-500" />
-                    <div className="flex flex-col justify-between p-6 space-y-8">
-                        <div className="space-y-2">
-                            <h2 className="text-2xl font-semibold tracki">Mosque Development</h2>
-                            <p className="dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
-                        </div>
-                        <button className="font-semibold text-start w-24 underline text-amber-800 ">Read more</button>
-                    </div>
-                </div>
-                {/* single card  */}
-                <div className="max-w-xs shadow-md hover:bg-lime-600 hover:text-white transition duration-300 dark:bg-gray-900 dark:text-gray-100">
-                    <img src="https://source.unsplash.com/random/300x300/?2" alt="pic" className="object-cover object-center w-full h-72 dark:bg-gray-500" />
-                    <div className="flex flex-col justify-between p-6 space-y-8">
-                        <div className="space-y-2">
-                            <h2 className="text-2xl font-semibold tracki">Mosque Development</h2>
-                            <p className="dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
-                        </div>
-                        <button className="font-semibold text-start w-24 underline text-amber-800 ">Read more</button>
-                    </div>
-                </div>
-                {/* single card  */}
-                <div className="max-w-xs shadow-md hover:bg-lime-600 hover:text-white transition duration-300 dark:bg-gray-900 dark:text-gray-100">
-                    <img src="https://source.unsplash.com/random/300x300/?2" alt="pic" className="object-cover object-center w-full h-72 dark:bg-gray-500" />
-                    <div className="flex flex-col justify-between p-6 space-y-8">
-                        <div className="space-y-2">
-                            <h2 className="text-2xl font-semibold tracki">Mosque Development</h2>
-                            <p className="dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
-                        </div>
-                        <button className="font-semibold text-start w-24 underline text-amber-800 ">Read more</button>
-                    </div>
-                </div>
-                {/* single card  */}
-                <div className="max-w-xs shadow-md hover:bg-lime-600 hover:text-white transition duration-300 dark:bg-gray-900 dark:text-gray-100">
-                    <img src="https://source.unsplash.com/random/300x300/?2" alt="pic" className="object-cover object-center w-full h-72 dark:bg-gray-500" />
-                    <div className="flex flex-col justify-between p-6 space-y-8">
-                        <div className="space-y-2">
-                            <h2 className="text-2xl font-semibold tracki">Mosque Development</h2>
-                            <p className="dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
-                        </div>
-                        <button className="font-semibold text-start w-24 underline text-amber-800 ">Read more</button>
-                    </div>
-                </div>
 
-               
+
+                {
+
+                someService?.map((service,i)=>(
+                            
+                <div key={i} className="lg:w-[22rem] shadow-md hover:bg-lime-600 hover:text-white transition duration-300 dark:bg-gray-900 dark:text-gray-100">
+                <img src={service?.image_url} alt="pic" className="object-cover object-center w-full h-72 dark:bg-gray-500" />
+                <div className="flex flex-col justify-between p-6 space-y-8">
+                    <div className="space-y-2">
+                        <h2 className="text-2xl font-semibold tracki">{service?.title}</h2>
+                        <p className="dark:text-gray-100">{service?.description}</p>
+                    </div>
+                    <button className="font-semibold text-start w-24 underline text-amber-800 ">Read more</button>
+                </div>
+            </div>
+                ))
+                }
 
             </div>
         </div>
