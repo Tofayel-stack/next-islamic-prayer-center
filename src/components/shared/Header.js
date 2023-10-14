@@ -4,6 +4,7 @@ import { AiFillLinkedin } from 'react-icons/ai';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { AiTwotonePhone } from 'react-icons/ai';
 import { LuMailPlus } from 'react-icons/lu';
+import Link from 'next/link';
 
 const Header = () => {
     return (
@@ -16,6 +17,8 @@ const Header = () => {
                 </div>
 
                 <div className='flex items-center gap-2'>
+                    <Link className='bg-amber-400 px-2 rounded' href='/login'>signUp</Link>
+
                     follow us : 
                     <span><BsFacebook/></span>
                     <span><AiFillLinkedin/></span>

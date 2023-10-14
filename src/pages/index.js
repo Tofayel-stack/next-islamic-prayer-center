@@ -48,7 +48,6 @@ Home.getLayout = function getLayout(page) {
 
 
 export const getStaticProps = async () => {
-  console.log('Starting getStaticProps');
   
   const res = await fetch('http://localhost:3000/api/services');
   const data = await res.json();

@@ -4,7 +4,7 @@ import styles from '@/styles/landing.module.css'
 
 const Service = ({allService}) => {
 
-    console.log(allService);
+    // console.log(allService);
 
     return (
         <div>

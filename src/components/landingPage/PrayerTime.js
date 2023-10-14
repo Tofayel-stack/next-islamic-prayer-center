@@ -12,9 +12,13 @@ const PrayerTime = () => {
 
    const [prayerTimeData, setPrayerTimeData] = useState(null)
    const [isLoading, setLoading] = useState(true)
+
+   const date = new Date();
+   const formattedDate = `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`;
+   // console.log(formattedDate);
   
    useEffect(() => {
-     fetch('http://api.aladhan.com/v1/timingsByCity/11-10-2023?city=Bogra&country=Bangladesh&method=8')
+     fetch(`http://api.aladhan.com/v1/timingsByCity/${formattedDate}?city=Bogra&country=Bangladesh&method=8`)
        .then((res) => res.json())
        .then((data) => {
          setPrayerTimeData(data)
@@ -25,11 +29,14 @@ const PrayerTime = () => {
 
 
    const allTimings = prayerTimeData?.data?.timings;
-
+   const weekdayName = prayerTimeData?.data?.date.gregorian.weekday.en;
    const day = prayerTimeData?.data?.date?.hijri?.day;
    const month = prayerTimeData?.data?.date?.hijri?.month?.en;
    const year = prayerTimeData?.data?.date?.hijri?.year;
    const timezone = prayerTimeData?.data?.meta?.timezone;
+   const englishDate =prayerTimeData?.data?.date?.readable;
+   
+   
 
     return (
     
@@ -41,7 +48,7 @@ const PrayerTime = () => {
                 Today’s Prayer Times
                 </h2>
                 <p>HIJRI : {day} , {month} , {year} </p>
-                <p>{prayerTimeData?.data?.date?.readable} <span className='text-amber-500'> Timezone :</span> {timezone}</p>
+                <p>{englishDate} , {weekdayName} <span className='text-amber-500'> Timezone :</span> {timezone}</p>
              
             </div>
             <div className="grid grid-cols-2 gap-2 row-gap-2 mb-10 sm:grid-cols-3 lg:grid-cols-6">

@@ -6,7 +6,7 @@ const Services = ({allService}) => {
    
     const someService = allService.slice(0, 4);
 
-    console.log(someService);
+    // console.log(someService);
 
     return (
         <div className='container m-auto py-24'>
