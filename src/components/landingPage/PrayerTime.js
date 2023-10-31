@@ -40,7 +40,7 @@ const PrayerTime = () => {
 
     return (
     
-        <div className={`bg-[url("https://www.sunnism.com/wp-content/uploads/2023/05/What-is-Namaz-in-Islam.jpg")] z-0 text-white bg-no-repeat bg-cover py-20 ${styles.imageOverlay}`} > 
+        <div className={`bg-[url("https://www.sunnism.com/wp-content/uploads/2023/05/What-is-Namaz-in-Islam.jpg")] z-0 text-white bg-no-repeat bg-cover px-4 py-20 ${styles.imageOverlay}`} > 
 
              <div className="container mx-auto md:px-24 lg:px-8 relative z-30">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">

@@ -9,7 +9,7 @@ const Services = ({allService}) => {
     // console.log(someService);
 
     return (
-        <div className='container m-auto py-24'>
+        <div className='container m-auto px-4 py-24'>
             {/* title */}
             <div >
                <h1 className='text-center my-6 font-sans text-5xl font-bold  md:mx-auto'> Islamic Center Services</h1>

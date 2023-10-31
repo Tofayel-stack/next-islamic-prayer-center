@@ -3,7 +3,7 @@ import styles from '../../styles/landing.module.css'
 
 const PillarsIslam = () => {
     return (
-        <div className={`bg-[url("https://png.pngtree.com/background/20220714/original/pngtree-islamic-background-ramadan-kareem-with-gold-mandala-in-wedding-invitation-card-picture-image_1604474.jpg")] z-0 text-white bg-no-repeat bg-cover py-20 ${styles.imageOverlay}`} > 
+        <div className={`bg-[url("https://png.pngtree.com/background/20220714/original/pngtree-islamic-background-ramadan-kareem-with-gold-mandala-in-wedding-invitation-card-picture-image_1604474.jpg")] z-0 text-white bg-no-repeat bg-cover px-4 py-20 ${styles.imageOverlay}`} > 
 
         <div className="container mx-auto md:px-24 lg:px-8 relative z-30">
        <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">

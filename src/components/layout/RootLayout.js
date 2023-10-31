@@ -10,8 +10,8 @@ const RootLayout = ({children}) => {
     return (
         <>
         <SessionProvider >
-        <Header></Header>
-        <Navbar></Navbar>
+        {/* <Header></Header> */}
+        {/* <Navbar></Navbar> */}
         
         <main>{children}</main>
 

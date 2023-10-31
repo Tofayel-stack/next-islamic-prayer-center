@@ -1,9 +1,19 @@
 import { useSession, signIn, signOut } from "next-auth/react"
+import { useRouter } from "next/router";
 
 
 
 const Login = () => {
 
+    const router = useRouter()
+
+    const customLogin = () =>{
+        
+        console.log('button clicked');
+        router.push('/')
+        // alert('this feature coming soon !!')
+           
+    }
 
 
     return (
@@ -58,7 +68,7 @@ const Login = () => {
                     </div>
                     
                     <div className="px-4 pb-2 pt-4">
-                        <button className="uppercase block w-full p-3 rounded bg-lime-600 ">sign in</button>
+                        <button onClick={()=>customLogin()} className="uppercase block w-full p-3 rounded bg-lime-600 ">sign in</button>
                     </div>
 
                 </form>
