@@ -1,4 +1,5 @@
 import { useSession, signIn, signOut } from "next-auth/react"
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 
@@ -11,7 +12,7 @@ const Login = () => {
         
         console.log('button clicked');
         router.push('/')
-        // alert('this feature coming soon !!')
+        alert('this feature coming soon !!')
            
     }
 
@@ -20,6 +21,8 @@ const Login = () => {
 
 
     <section className="min-h-screen flex items-stretch text-white ">
+
+  
 
 
         <div className="lg:flex w-1/2 hidden bg-gray-500 bg-no-repeat bg-cover relative items-center" style={{background : "url(https://images.unsplash.com/photo-1577495508048-b635879837f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80)"}}>
@@ -36,6 +39,7 @@ const Login = () => {
 
             <div className="w-full py-6 z-20">
                  <h1 className="text-4xl font-semibold">Log in</h1>
+                 <div className="bg-amber-600 rounded p-1 mt-1 w-28 text-center m-auto" ><Link href='/'>Go to home</Link></div>
 
               
                 <div className="py-6 space-x-2">

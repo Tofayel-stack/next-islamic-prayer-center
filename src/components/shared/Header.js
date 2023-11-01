@@ -17,12 +17,12 @@ const Header = () => {
         <div className='bg-[#8A9535] py-3 font-semibold'>
             <div className='container m-auto flex justify-between text-white'>
 
-                <div>
+                <div className='hidden lg:block'>
                     <span > <AiTwotonePhone className='inline'/> 01762000000 </span> &nbsp;
                     <span><LuMailPlus className='inline'/> mdtofayelhossain69@gmail.com</span>
                 </div>
 
-                <div className='flex items-center gap-2'>
+                <div className='flex items-center gap-2 lg:text-base text-xs'>
 
                     {
                         user? 
@@ -40,10 +40,12 @@ const Header = () => {
                         
                   
 
-                    follow us : 
-                    <span><BsFacebook/></span>
-                    <span><AiFillLinkedin/></span>
-                    <span><AiOutlineTwitter/></span>
+                  follow us : 
+                    
+                    <span className='hidden lg:block'><BsFacebook/></span>
+                    <span className='hidden lg:block'><AiFillLinkedin/></span>
+                    <span className='hidden lg:block'><AiOutlineTwitter/></span>
+                
                 </div>
             </div>
         </div>
