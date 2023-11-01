@@ -9,7 +9,7 @@ const Footer = () => {
                 
           <div className={`container m-auto relative z-20 text-white text-center `}>
             <div className='flex justify-center items-center my-8'>
-                <img className='w-36' src="https://i.ibb.co/W3b4PJc/24-242664-islamic-logo-free-png-transparent-png-removebg-preview.png" alt="logo" />
+                <img className='lg:w-36 w-24' src="https://i.ibb.co/W3b4PJc/24-242664-islamic-logo-free-png-transparent-png-removebg-preview.png" alt="logo" />
                 <div>
                     <p className='text-3xl font-bold '>EKRAH</p>
                     <span>Islamic Center</span>
@@ -19,10 +19,12 @@ const Footer = () => {
 
                 <div className="flex flex-row justify-center items-center my-8">
                     
-                <p className="text-xl mx-4
-                 antialiased text-center dark:text-gray-100">Subscribe For Latest Updates</p>
-                    <input type="text" placeholder="example@email.com" className="w-96 p-3 rounded-l-lg bg-zinc-900 outline-none" />
-                    <button className="w-44 p-3 font-semibold rounded-r-lg bg-lime-600 dark:bg-violet-400 dark:text-gray-900">Subscribe</button>
+                    <p className="hidden lg:block text-xl mx-4
+                        antialiased text-center dark:text-gray-100">Subscribe For Latest Updates</p>
+                   <div>
+                        <input type="text" placeholder="example@email.com" className="w-96  p-3 rounded-l-lg bg-zinc-900 outline-none" />
+                            <button className="w-44 p-3 lg:mt-0 mt-2 font-semibold lg:rounded-r-lg bg-lime-600 dark:bg-violet-400 dark:text-gray-900">Subscribe</button>
+                   </div>
                 </div>
           </div>
          

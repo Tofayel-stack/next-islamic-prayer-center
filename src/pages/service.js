@@ -4,7 +4,6 @@ import styles from '@/styles/landing.module.css'
 
 const Service = ({allService}) => {
 
-    // console.log(allService);
 
     return (
         <div>
@@ -21,7 +20,7 @@ const Service = ({allService}) => {
                   {/* title */}
                     <div >
                     <h1 className='text-center my-6 font-sans text-5xl font-bold  md:mx-auto'> Islamic Center Services</h1>
-                        <p className='text-amber-700 my-4 text-2xl text-center'>Ethical & Moral Beliefs That Guides To The Straight Path!</p>
+                        <p className='text-amber-700 my-4 text-sm lg:text-2xl text-center'>Ethical & Moral Beliefs That Guides To The Straight Path!</p>
                     </div>
 
                 <div className='mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-3'>
@@ -30,7 +29,7 @@ const Service = ({allService}) => {
 
                 {
                     allService?.map((service,i)=>(
-                        <div key={i} className="w-[22rem] shadow-md hover:bg-lime-600 hover:text-white transition duration-300 dark:bg-gray-900 dark:text-gray-100">
+                        <div key={i} className="w-[22rem] m-auto shadow-md hover:bg-lime-600 hover:text-white transition duration-300 dark:bg-gray-900 dark:text-gray-100">
                         <img src={service?.image_url} alt="pic" className="object-cover object-center w-full h-72 dark:bg-gray-500" />
                         <div className="flex flex-col justify-between p-6 space-y-8">
                             <div className="space-y-2">

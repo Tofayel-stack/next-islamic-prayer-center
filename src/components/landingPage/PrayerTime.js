@@ -43,8 +43,8 @@ const PrayerTime = () => {
         <div className={`bg-[url("https://www.sunnism.com/wp-content/uploads/2023/05/What-is-Namaz-in-Islam.jpg")] z-0 text-white bg-no-repeat bg-cover px-4 py-20 ${styles.imageOverlay}`} > 
 
              <div className="container mx-auto md:px-24 lg:px-8 relative z-30">
-            <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-                <h2 className="max-w-lg mb-6 font-sans text-5xl font-bold  md:mx-auto">
+            <div className="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
+                <h2 className="max-w-lg mb-6 font-sans text-5xl font-bold  mx-auto">
                 Today’s Prayer Times
                 </h2>
                 <p>HIJRI : {day} , {month} , {year} </p>

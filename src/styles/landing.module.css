@@ -40,3 +40,11 @@
   border-image-outset: 0;
   background-color: transparent;
 }
+
+
+@media (max-width: 575.98px) {
+  /* CSS for extra-small devices */
+  .islamicDesign::after{
+    transform: scaleX(3);
+  }
+}

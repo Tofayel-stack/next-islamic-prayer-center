@@ -16,8 +16,8 @@ const About = () => {
                <div className='lg:w-[70rem] m-auto'>
                   {/* title */}
                     <div >
-                    <h1 className='text-center my-6 font-sans text-5xl font-bold  md:mx-auto'> Board Of Scholors</h1>
-                        <p className='text-amber-700 my-4 text-2xl text-center'>Our scholar whose knowledge is useful for others</p>
+                    <h1 className='text-center text-3xl my-6 font-sans lg:text-5xl font-bold  md:mx-auto'> Board Of Scholors</h1>
+                        <p className='text-amber-700 my-4 lg:text-2xl text-center'>Our scholar whose knowledge is useful for others</p>
                     </div>
 
                 <div className='mt-16 grid grid-cols-1 gap-2 my-10 sm:grid-cols-3 lg:grid-cols-3'>
