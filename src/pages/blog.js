@@ -83,7 +83,7 @@ Blog.getLayout = function getLayout(page) {
   
 export const getServerSideProps = async () => {
     
-    const res = await fetch('https://qjm86z1j-3000.inc1.devtunnels.ms/api/blog');
+    const res = await fetch('https://next-islamic-prayer-center-seven.vercel.app/api/blog');
     const data = await res.json();
   
     

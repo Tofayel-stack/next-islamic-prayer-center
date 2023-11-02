@@ -49,7 +49,7 @@ Home.getLayout = function getLayout(page) {
 
 export const getStaticProps = async () => {
   
-  const res = await fetch('https://qjm86z1j-3000.inc1.devtunnels.ms/api/services');
+  const res = await fetch('https://next-islamic-prayer-center-seven.vercel.app/api/services');
   const data = await res.json();
 
   // console.log('Fetched data:', data);

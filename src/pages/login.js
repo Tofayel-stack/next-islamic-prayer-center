@@ -46,12 +46,12 @@ const Login = () => {
 
                     <span className="w-10 h-10 items-center justify-center inline-flex rounded-full font-bold text-lg border-2 border-white">
                         <button onClick={() => signIn('github',{
-                                callbackUrl:"https://qjm86z1j-3000.inc1.devtunnels.ms/"
+                                callbackUrl:"https://next-islamic-prayer-center-seven.vercel.app/"
                             })}>git</button>
                         </span>
 
                     <span className="w-10 h-10 items-center justify-center inline-flex rounded-full font-bold text-lg border-2 border-white">  <button onClick={() => signIn('google',{
-                                callbackUrl:"https://qjm86z1j-3000.inc1.devtunnels.ms/"
+                                callbackUrl:"https://next-islamic-prayer-center-seven.vercel.app/"
                             })}>G+</button>
                         </span>
 
