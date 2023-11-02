@@ -93,7 +93,7 @@ BlogDetails.getLayout = function getLayout(page) {
   export const getServerSideProps = async (context)=> {
     const {params} = context;
     const blogID = params.blogID;
-    const res = await fetch(`http://localhost:3000/api/blog?blogID=${blogID}`)
+    const res = await fetch(`https://qjm86z1j-3000.inc1.devtunnels.ms/api/blog?blogID=${blogID}`)
     const data = await res.json()
 
     console.log(data);

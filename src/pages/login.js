@@ -46,12 +46,12 @@ const Login = () => {
 
                     <span className="w-10 h-10 items-center justify-center inline-flex rounded-full font-bold text-lg border-2 border-white">
                         <button onClick={() => signIn('github',{
-                                callbackUrl:"http://localhost:3000/"
+                                callbackUrl:"https://qjm86z1j-3000.inc1.devtunnels.ms/"
                             })}>git</button>
                         </span>
 
                     <span className="w-10 h-10 items-center justify-center inline-flex rounded-full font-bold text-lg border-2 border-white">  <button onClick={() => signIn('google',{
-                                callbackUrl:"http://localhost:3000/"
+                                callbackUrl:"https://qjm86z1j-3000.inc1.devtunnels.ms/"
                             })}>G+</button>
                         </span>
 
