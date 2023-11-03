@@ -17,10 +17,10 @@ The Islamic Prayer Center is a social forum website providing a range of service
 
 ## Getting Started
 
+npm run dev
+
 To run the development server, use:
 
-```bash
-npm run dev
 
 
 ```bash
