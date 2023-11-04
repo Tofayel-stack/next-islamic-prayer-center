@@ -18,7 +18,7 @@ const PrayerTime = () => {
    // console.log(formattedDate);
   
    useEffect(() => {
-     fetch(`http://api.aladhan.com/v1/timingsByCity/${formattedDate}?city=Bogra&country=Bangladesh&method=8`)
+     fetch(`https://api.aladhan.com/v1/timingsByCity/${formattedDate}?city=Bogra&country=Bangladesh&method=8`)
        .then((res) => res.json())
        .then((data) => {
          setPrayerTimeData(data)
