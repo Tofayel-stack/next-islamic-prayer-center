@@ -3,7 +3,7 @@ import styles from '../../styles/landing.module.css'
 
 const Footer = () => {
     return (
-        <div className={`bg-[url("https://cdn.pixabay.com/photo/2018/09/28/19/07/islamic-3710002_640.jpg")] z-0  bg-no-repeat bg-cover bg-center pt-32 ${styles.imageOverlay} relative ` }>
+        <div className={`bg-[url("https://cdn.pixabay.com/photo/2018/09/28/19/07/islamic-3710002_640.jpg")] z-0  bg-no-repeat bg-cover bg-center pt-32 ${styles.imageOverlay} relative  overflow-hidden` }>
             
         <div className={`${styles.islamicDesign} pb-24`}>
                 
